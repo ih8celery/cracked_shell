@@ -1,24 +1,26 @@
-/// Cracked Shell Library
-///
-/// This library implements a Lisp-based shell with Unix command integration.
-/// See docs/architecture.md for design details and docs/lisp-reference.md
-/// for language specification.
-
 #![warn(missing_docs)]
 #![warn(clippy::all)]
 
-// Module declarations - to be implemented in Phase 2+
-// pub mod repl;
-// pub mod lexer;
+//! Cracked Shell Library
+//!
+//! This library implements a Lisp-based shell with Unix command integration.
+//! See docs/architecture.md for design details and docs/lisp-reference.md
+//! for language specification.
+
+// Module declarations
+pub mod error;
+pub mod value;
+pub mod lexer;
+
+// Modules to be implemented in later steps
 // pub mod parser;
 // pub mod eval;
 // pub mod env;
 // pub mod macro_expand;
 // pub mod builtin;
+// pub mod repl;
 // pub mod process;
 // pub mod stream;
-// pub mod value;
-// pub mod error;
 
 /// Placeholder module for early testing
 pub mod placeholder {
