@@ -11,9 +11,7 @@
 pub mod error;
 pub mod value;
 pub mod lexer;
-
-// Modules to be implemented in later steps
-// pub mod parser;
+pub mod parser;
 // pub mod eval;
 // pub mod env;
 // pub mod macro_expand;
