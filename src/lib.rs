@@ -14,6 +14,7 @@ pub mod lexer;
 pub mod parser;
 pub mod env;
 pub mod builtin;
+pub mod eval;
 // pub mod macro_expand;
 // pub mod repl;
 // pub mod process;
