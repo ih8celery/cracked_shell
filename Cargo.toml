@@ -1,0 +1,55 @@
+[package]
+name = "cracked_shell"
+version = "0.1.0"
+edition = "2021"
+authors = ["Adam Marshall"]
+description = "A Unix shell with Lisp syntax combining composability with performance"
+repository = "https://github.com/yourusername/cracked_shell"
+license = "MIT OR Apache-2.0"
+keywords = ["shell", "lisp", "unix", "repl"]
+categories = ["command-line-utilities"]
+
+[dependencies]
+# Async runtime for process management
+tokio = { version = "1", features = ["full"] }
+
+# REPL with readline support
+rustyline = "13"
+
+# Parser combinators
+nom = "7"
+
+# Unix system calls
+nix = { version = "0.27", features = ["process", "signal"] }
+
+# Error handling
+thiserror = "1"
+
+# Terminal colors
+colored = "2"
+
+# Async streams
+futures = "0.3"
+
+[dev-dependencies]
+# Benchmarking
+criterion = { version = "0.5", features = ["html_reports"] }
+
+# Property-based testing
+proptest = "1"
+
+# Temporary directories for testing
+tempfile = "3"
+
+[[bin]]
+name = "cracked"
+path = "src/main.rs"
+
+[[bench]]
+name = "eval_benchmark"
+harness = false
+
+[profile.release]
+opt-level = 3
+lto = true
+codegen-units = 1
